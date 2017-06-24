@@ -1,0 +1,15 @@
+{
+    "name": "RxJS",
+    "package": "rxjs",
+    "index": "./rxjs/tmp/docs/index.html",
+    "selectors": {
+        "dt a": "Command",
+        "title": "Package"
+    },
+    "ignore": [
+        "ABOUT"
+    ],
+    "icon32x32": "./icon32x32.png",
+    "allowJS": true,
+    "ExternalURL": "https://iansinnott.com/temp"
+}
