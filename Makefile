@@ -47,7 +47,7 @@ rxjs.docset: rxjs/tmp/docs/index.html prebuild
 # This would be much simpler if we didn't check for the outfile...
 list_matched_files:
 	if [ -f $(outfile) ]; then \
-		cat $(outfile) | ag 'is type .+ at' | sed -E -e 's/.+rxjs/rxjs/' -e 's/#.+$$//'; \
+		cat $(outfile) | ag 'is type .+ at' | sed -E -e 's/.+rxjs/rxjs/' -e 's/#.+$$//' | sort | uniq; \
 	else \
 		echo "Outfile: \"$(outfile)\" not found. Maybe you need to run \"make rxjs.docset\""; \
-	fi;
+	fi
