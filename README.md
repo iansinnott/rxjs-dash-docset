@@ -1,8 +1,8 @@
 # RxJS 5 Dash Docs
 
-![RxJS in Dash](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-07-03%20at%2010.18.05%20PM.png)
+![RxJS in Dash](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-07-04%20at%201.36.51%20AM.png)
 
-![RxJS mergeMap in Dash](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-07-03%20at%2010.44.07%20PM.png)
+![RxJS mergeMap in Dash](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-07-04%20at%201.38.50%20AM.png)
 
 ---
 <!-- Everything below this point will not be included in the dist sent to Dash -->
