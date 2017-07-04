@@ -1,15 +1,21 @@
 {
     "name": "RxJS",
     "package": "rxjs",
-    "index": "./rxjs/tmp/docs/index.html",
+    "index": "./docs/index.html",
     "selectors": {
-        "dt a": "Command",
-        "title": "Package"
+        ".self-detail.detail h1": {
+          "type": "Class"
+        },
+        ".detail h3 [data-ice='name']": {
+          "type": "Method",
+          "requiretext": "\\S+"
+        },
+        ".github-markdown [data-ice='content'] > h1": {
+          "type": "Guide",
+          "matchpath": "docs/manual/(tutorial|overview)\\.html"
+        }
     },
-    "ignore": [
-        "ABOUT"
-    ],
     "icon32x32": "./icon32x32.png",
     "allowJS": true,
-    "ExternalURL": "https://iansinnott.com/temp"
+    "externalURL": "http://reactivex.io/rxjs"
 }

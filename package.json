@@ -1,0 +1,11 @@
+{
+  "name": "rxjs-dash-docset",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ian Sinnott <ian@iansinnott.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "rxjs": "^5.4.1"
+  }
+}

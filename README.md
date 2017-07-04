@@ -24,6 +24,10 @@ Now, to build:
 make
 ```
 
+## Issues
+
+Dashing seems to completely ignore all its [mapping/filtering options](https://github.com/technosophos/dashing#other-mappersfilters-on-selectors) entirely. I've left them in here in case they start working again later... but they do NOT work yet.
+
 ## TODO
 
 * Dashing needs to be configured to generate accurate docs
