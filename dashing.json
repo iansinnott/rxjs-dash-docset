@@ -1,6 +1,6 @@
 {
     "name": "RxJS",
-    "package": "rxjs",
+    "package": "RxJS",
     "index": "./index.html",
     "selectors": {
         ".self-detail.detail h1": {

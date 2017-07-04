@@ -6,10 +6,9 @@ outfile = build_log.txt
 # Silly amount of aliasing? Maybe
 all: build
 
-build: rxjs.docset
+build: dist/RxJS.tgz
 
 clean:
-	rm -rf ./rxjs.docset
 	rm -rf ./tmp
 
 # Grab the dashing binary. This way we don't need go installed
@@ -25,9 +24,6 @@ yarn.lock:
 	yarn install
 
 # Build the official docs from source
-# TODO: Is there a cleaner way to execute a bunch of commands from a certain
-# directory?
-#
 # NOTE: Make didn't recognize the file as already built until I touched it
 rxjs/tmp/docs/index.html: rxjs yarn.lock
 	(cd rxjs && yarn install && yarn run build_docs)
@@ -53,10 +49,11 @@ post_process_html: rxjs/tmp/docs/index.html
 	cp ./icon* ./tmp
 
 # Build the docset using dashing
-rxjs.docset: prebuild post_process_html
+tmp/RxJS.docset: prebuild post_process_html
 	(cd ./tmp; ./dashing.sh build > $(outfile))
-	mv ./tmp/$(outfile) ./
-	mv ./tmp/rxjs.docset ./
+
+dist/RxJS.tgz: tmp/RxJS.docset
+	./make_dist.sh
 
 # The sed replacement first removes everything up to 'rxjs' then it strips the
 # hash at the end.

@@ -4,6 +4,19 @@
 
 ![RxJS mergeMap in Dash](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-07-03%20at%2010.44.07%20PM.png)
 
+---
+<!-- Everything below this point will not be included in the dist sent to Dash -->
+
+## Install Locally
+
+The easiest way to install this is definitely through Dash, but when I wrote
+this readme the package wasn't yet live in Dash. So to install locally, download
+RxJS.tgz and extract it. Then in Dash:
+
+Preferences > Docsets > + (the plus sign in the lower left) > Add Local Docset
+
+Then chose the folder where you extracted RxJS.tgz. You're all set.
+
 ## Build
 
 ### Install dependencies
@@ -16,6 +29,8 @@ You will need:
 * ghostscript
 
 Easiest option is probably brew:
+
+**NOTE:** I'm ignoring yarn dependencies since you probably have Node already installed your your system.
 
 ```
 brew install yarn --ignore-dependencies

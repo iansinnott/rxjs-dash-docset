@@ -7,5 +7,6 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "rxjs": "^5.4.1"
-  }
+  },
+  "devDependencies": {}
 }

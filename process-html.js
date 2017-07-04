@@ -1,33 +1,10 @@
 const fs = require('fs');
-const { Observable, Subject } = require('rxjs');
 const cheerio = require('cheerio');
+const { Observable } = require('rxjs');
+const { fromReadableStream, split, trim } = require('./utils.js');
 
 const readFile = Observable.bindNodeCallback(fs.readFile);
 const writeFile = Observable.bindNodeCallback(fs.writeFile);
-
-const fromReadableStream = (stream) => Observable.create(obs => {
-  const next = chunk => obs.next(chunk);
-  const error = err => obs.error(err);
-  const complete = () => obs.complete();
-
-  // Set UTF-8 so we don't get Buffer instances read through
-  stream.setEncoding('utf8');
-
-  // Setup
-  stream.on('data', next);
-  stream.on('error', error);
-  stream.on('end', complete);
-
-  // Cleanup
-  return () => {
-    stream.removeListener('data', next);
-    stream.removeListener('error', error);
-    stream.removeListener('end', complete);
-  };
-});
-
-const split = by => str => str.split(by);
-const trim = str => str.trim();
 
 // This file is essentially an advanced, html-aware sed command
 // ============================================================
