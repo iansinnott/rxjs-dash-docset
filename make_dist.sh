@@ -21,6 +21,6 @@ cat ./README.md | node ./trim-readme.js > ./dist/README.md
 
 # Copy images
 echo "Copying images..."
-cp ./icon* ./dist
+cp ./icon{,@2x}.png ./dist
 
 echo "Done."

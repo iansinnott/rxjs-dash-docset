@@ -46,7 +46,7 @@ post_process_html: rxjs/tmp/docs/index.html
 	cp -R ./rxjs/tmp/docs ./tmp
 	find ./tmp -iname '*.html' | node process-html.js
 	cp ./dashing.* ./tmp
-	cp ./icon* ./tmp
+	cp ./icon{,@2x}.png ./tmp
 
 # Build the docset using dashing
 tmp/RxJS.docset: prebuild post_process_html
