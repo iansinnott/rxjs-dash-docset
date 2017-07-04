@@ -69,9 +69,14 @@ pre.prettyprint > code {
     .attr('style', 'padding: 20px;')
     .attr('class', 'dash-contents');
 
+  // Mark up source code files so that dashing can actually latch on to them
   $('.dash-contents > .raw-source-code')
     .parent() // I.e. we actually want .dash-contents with a child of .raw-source-code.
     .addClass('dash-source-code');
+
+  // Strip out the redundant text from document titles
+  const $title = $('head > title');
+  $title.text($title.text().replace(' | RxJS API Document', ''))
 
   // Remove scripts that either broke or didn't seem necessary to displaying
   // the docs
