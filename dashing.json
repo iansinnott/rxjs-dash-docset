@@ -18,7 +18,7 @@
           "type": "File"
         }
     },
-    "icon32x32": "./icon32x32.png",
+    "icon32x32": "./icon@2x.png",
     "allowJS": true,
     "externalURL": "http://reactivex.io/rxjs"
 }
