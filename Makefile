@@ -27,8 +27,11 @@ yarn.lock:
 # Build the official docs from source
 # TODO: Is there a cleaner way to execute a bunch of commands from a certain
 # directory?
+#
+# NOTE: Make didn't recognize the file as already built until I touched it
 rxjs/tmp/docs/index.html: rxjs yarn.lock
 	(cd rxjs && yarn install && yarn run build_docs)
+	touch rxjs/tmp/docs/index.html
 
 # What was I doing here? I think this was related to dashing matching some empty
 # selectors within these files, AND the filtering options of dashing being
@@ -44,8 +47,8 @@ prebuild:
 # Sort of semantically confusing that this is separate from the prebuild
 # command... since it's part of what happens before build. Meh
 post_process_html: rxjs/tmp/docs/index.html
-	cp -R ./rxjs/tmp ./tmp
-	find ./tmp/docs -iname '*.html' | node process-html.js
+	cp -R ./rxjs/tmp/docs ./tmp
+	find ./tmp -iname '*.html' | node process-html.js
 	cp ./dashing.* ./tmp
 	cp ./icon* ./tmp
 

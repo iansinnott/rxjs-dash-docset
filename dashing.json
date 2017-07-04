@@ -1,7 +1,7 @@
 {
     "name": "RxJS",
     "package": "rxjs",
-    "index": "./docs/index.html",
+    "index": "./index.html",
     "selectors": {
         ".self-detail.detail h1": {
           "type": "Class"
@@ -12,7 +12,7 @@
         },
         ".github-markdown [data-ice='content'] > h1": {
           "type": "Guide",
-          "matchpath": "docs/manual/(tutorial|overview)\\.html"
+          "matchpath": "manual/(tutorial|overview)\\.html"
         }
     },
     "icon32x32": "./icon32x32.png",
