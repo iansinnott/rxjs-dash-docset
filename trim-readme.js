@@ -8,11 +8,15 @@ const { fromReadableStream, trim, replace } = require('./utils.js');
  */
 
 const replacement = `
-**Author:** Ian Sinnott [@ian_sinn](https://twitter.com/ian_sinn)
+**Author:** Ian Sinnott [@ian_sinn](https://twitter.com/ian_sinn) [github.com/iansinnott](https://github.com/iansinnott)
 
-## How to generate
+For...
 
-See the instructions in [the repo](https://github.com/iansinnott/rxjs-dash-docset).
+* Instructions on how to generate
+* Screenshots
+* More info
+
+Check out the README at [iansinnott/rxjs-dash-docset](https://github.com/iansinnott/rxjs-dash-docset)
 `.trim();
 
 fromReadableStream(process.stdin)

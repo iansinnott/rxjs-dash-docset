@@ -5,8 +5,12 @@ IFS=$'\n\t'
 
 VERSION=$(node -e 'process.stdout.write(require("./rxjs/package.json").version)')
 
+# Hm, initially I had the command below but that always packaged in such a way
+# that the archive would extract to a dir with the name `tmp`. So it would end
+# up being `tmp/RxJS.tgz`. That broke Dash's CI
 echo "Packaging RxJS.tgz..."
-tar --exclude='.DS_Store' -cvzf ./dist/RxJS.tgz ./tmp/RxJS.docset
+(cd ./tmp; tar --exclude='.DS_Store' -cvzf RxJS.tgz RxJS.docset)
+mv ./tmp/RxJS.tgz ./dist
 
 echo "Updating docset.json with current version..."
 cat docset.template.json | sed "s/\$VERSION_SUPPLIED_BY_SCRIPT_DO_NOT_MODIFY/$VERSION/" > ./dist/docset.json

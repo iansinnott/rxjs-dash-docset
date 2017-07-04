@@ -1,11 +1,13 @@
 # RxJS 5 Dash Docs
 
-![RxJS in Dash](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-07-03%20at%2010.18.05%20PM.png)
+RxJS 5 documentation for Dash
 
-![RxJS mergeMap in Dash](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-07-03%20at%2010.44.07%20PM.png)
+**Author:** Ian Sinnott [@ian_sinn](https://twitter.com/ian_sinn) [github.com/iansinnott](https://github.com/iansinnott)
 
-**Author:** Ian Sinnott [@ian_sinn](https://twitter.com/ian_sinn)
+For...
 
-## How to generate
+* Instructions on how to generate
+* Screenshots
+* More info
 
-See the instructions in [the repo](https://github.com/iansinnott/rxjs-dash-docset).
+Check out the README at [iansinnott/rxjs-dash-docset](https://github.com/iansinnott/rxjs-dash-docset)

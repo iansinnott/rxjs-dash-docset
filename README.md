@@ -1,21 +1,29 @@
 # RxJS 5 Dash Docs
 
-![RxJS in Dash](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-07-04%20at%201.36.51%20AM.png)
-
-![RxJS mergeMap in Dash](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-07-04%20at%201.38.50%20AM.png)
+RxJS 5 documentation for Dash
 
 ---
 <!-- Everything below this point will not be included in the dist sent to Dash -->
+
+![RxJS in Dash](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-07-04%20at%201.36.51%20AM.png)
+
+![RxJS mergeMap in Dash](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-07-04%20at%201.38.50%20AM.png)
 
 ## Install Locally
 
 The easiest way to install this is definitely through Dash, but when I wrote
 this readme the package wasn't yet live in Dash. So to install locally, download
-RxJS.tgz and extract it. Then in Dash:
+RxJS.tgz and extract it.
 
+👉 [Download Here](https://github.com/iansinnott/rxjs-dash-docset/raw/master/dist/RxJS.tgz) 👈
+
+Then in Dash go to:
+
+```
 Preferences > Docsets > + (the plus sign in the lower left) > Add Local Docset
+```
 
-Then chose the folder where you extracted RxJS.tgz. You're all set.
+Then chose `RxJS.docset` from the folder where you extracted it. You're all set. Just star the repo and you're done 😉.
 
 ## Build
 
