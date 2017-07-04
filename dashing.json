@@ -13,6 +13,9 @@
         ".github-markdown [data-ice='content'] > h1": {
           "type": "Guide",
           "matchpath": "manual/(tutorial|overview)\\.html"
+        },
+        ".dash-source-code > h1": {
+          "type": "File"
         }
     },
     "icon32x32": "./icon32x32.png",

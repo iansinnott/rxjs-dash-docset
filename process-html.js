@@ -69,6 +69,10 @@ pre.prettyprint > code {
     .attr('style', 'padding: 20px;')
     .attr('class', 'dash-contents');
 
+  $('.dash-contents > .raw-source-code')
+    .parent() // I.e. we actually want .dash-contents with a child of .raw-source-code.
+    .addClass('dash-source-code');
+
   // Remove scripts that either broke or didn't seem necessary to displaying
   // the docs
   $('script')
