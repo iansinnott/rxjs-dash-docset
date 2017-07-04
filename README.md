@@ -1,5 +1,9 @@
 # RxJS 5 Dash Docs
 
+![RxJS in Dash](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-07-03%20at%2010.18.05%20PM.png)
+
+![RxJS mergeMap in Dash](https://dropsinn.s3.amazonaws.com/Screen%20Shot%202017-07-03%20at%2010.44.07%20PM.png)
+
 ## Build
 
 ### Install dependencies
@@ -14,7 +18,7 @@ You will need:
 Easiest option is probably brew:
 
 ```
-brew install yarn
+brew install yarn --ignore-dependencies
 brew install imagemagick graphicsmagick ghostscript
 ```
 
@@ -24,17 +28,17 @@ Now, to build:
 make
 ```
 
+To *re*build, add in `clean`:
+
+```
+make clean build
+```
+
 ## Issues
 
 Dashing seems to completely ignore all its [mapping/filtering options](https://github.com/technosophos/dashing#other-mappersfilters-on-selectors) entirely. I've left them in here in case they start working again later... but they do NOT work yet.
 
 ## TODO
 
-* Dashing needs to be configured to generate accurate docs
-* Clean ?
-* I may need a custom script to remove/hide parts of the page that make no sense in the context of Dash
-  * Remove sidebar
-  * Fix pre block text wrapping so that everything fits
-  * Dark theme?
 * Versioning scheme?
   * What's the best way to auto-update the docs as new versions of Rx come out?
