@@ -20,8 +20,8 @@ dashing.sh:
 rxjs:
 	git clone https://github.com/ReactiveX/rxjs.git rxjs
 
-update: rxjs
-	./update.sh
+check_for_update: rxjs
+	./check_for_update.sh
 
 yarn.lock:
 	yarn install
@@ -37,19 +37,6 @@ rxjs/tmp/docs/index.html: rxjs yarn.lock
 	(cd rxjs && yarn install)
 	docker-compose run --workdir=/rxjs docs npm run build_docs
 
-# What was I doing here? I think this was related to dashing matching some empty
-# selectors within these files, AND the filtering options of dashing being
-# completely useless. The filtering options and advanced selectors seemt to be
-# completely ignored
-#
-# -f keeps this from affecting exit status even if these files have already been
-# removed
-prebuild:
-	rm -f rxjs/node_modules/esdoc/out/src/Publisher/Builder/template/class.html
-	rm -f rxjs/node_modules/esdoc/out/src/Publisher/Builder/template/details.html
-
-# Sort of semantically confusing that this is separate from the prebuild
-# command... since it's part of what happens before build. Meh
 post_process_html: rxjs/tmp/docs/index.html
 	cp -R ./rxjs/tmp/docs ./tmp
 	find ./tmp -iname '*.html' | node process-html.js
@@ -57,7 +44,7 @@ post_process_html: rxjs/tmp/docs/index.html
 	cp ./icon{,@2x}.png ./tmp
 
 # Build the docset using dashing
-tmp/RxJS.docset: prebuild post_process_html
+tmp/RxJS.docset: post_process_html
 	(cd ./tmp; ./dashing.sh build > $(outfile))
 
 dist/RxJS.tgz: tmp/RxJS.docset
