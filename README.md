@@ -48,6 +48,12 @@ To *re*build, add in `clean`:
 make clean build
 ```
 
+## Update
+
+When new docs are released just run `./publish.sh`. This will not actually publish the docs, but it will do everything short of that.
+
+**NOTE:** This _might_ not work if you haven't built before on your system. In that case just `make`.
+
 ## Issues
 
 Dashing seems to completely ignore all its [mapping/filtering options](https://github.com/technosophos/dashing#other-mappersfilters-on-selectors) entirely. I've left them in here in case they start working again later... but they do NOT work yet.
