@@ -6,3 +6,4 @@ dashing.sh
 build_log.txt
 tmp
 dist/tmp
+dist/versions
