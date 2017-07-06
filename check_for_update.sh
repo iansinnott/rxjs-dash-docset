@@ -19,11 +19,11 @@ check_for_update() {
 	echo "Update detected: ${current_version} -> ${latest_version}"
 
 	# Make sure versions exists
-	mkdir -p ./dist/versions
+	mkdir -p ./dist/versions/${current_version}
 
 	# Copy over the current version
-	echo "Moving current version to: ./dist/versions/${current_version}.tgz"
-	mv ./dist/RxJS.tgz ./dist/versions/${current_version}.tgz
+	echo "Moving current version to: ./dist/versions/${current_version}/RxJS.tgz"
+	mv ./dist/RxJS.tgz ./dist/versions/${current_version}/
 
 	# Remove all but the versions dir. Matches everything with an extension
 	rm -rf ./dist/*.*
