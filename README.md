@@ -31,19 +31,10 @@ Then chose `RxJS.docset` from the folder where you extracted it. You're all set.
 
 You will need:
 
-* yarn
-* imagemagick
-* graphicsmagick
-* ghostscript
+* `yarn`
+* `docker` and `docker-compose`
 
 Easiest option is probably brew:
-
-**NOTE:** I'm ignoring yarn dependencies since you probably have Node already installed your your system.
-
-```
-brew install yarn --ignore-dependencies
-brew install imagemagick graphicsmagick ghostscript
-```
 
 Now, to build:
 

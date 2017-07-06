@@ -1,4 +1,4 @@
-.PHONY: clean prebuild list_matched_files
+.PHONY: clean prebuild list_matched_files update
 
 # Where logs will be stored.
 outfile = build_log.txt
@@ -16,18 +16,26 @@ dashing.sh:
 	curl -L https://github.com/technosophos/dashing/releases/download/0.3.0/dashing > ./dashing.sh
 	chmod +x ./dashing.sh
 
-# Clone down the rxjs repo
+# Clone down the rxjs repo and install its deps
 rxjs:
-	git clone --depth=1 https://github.com/ReactiveX/rxjs.git rxjs
+	git clone https://github.com/ReactiveX/rxjs.git rxjs
+
+update: rxjs
+	./update.sh
 
 yarn.lock:
 	yarn install
 
-# Build the official docs from source
+# Build the official docs from source.
+#
+# NOTE: We use docker to run the actual build script because... for whatever
+# reason typescript throws a fit when I built it in the context of this project.
+# Also using docker means there's no need to install imagemagick and the like
+#
 # NOTE: Make didn't recognize the file as already built until I touched it
 rxjs/tmp/docs/index.html: rxjs yarn.lock
-	(cd rxjs && yarn install && yarn run build_docs)
-	touch rxjs/tmp/docs/index.html
+	(cd rxjs && yarn install)
+	docker-compose run --workdir=/rxjs docs npm run build_docs
 
 # What was I doing here? I think this was related to dashing matching some empty
 # selectors within these files, AND the filtering options of dashing being
