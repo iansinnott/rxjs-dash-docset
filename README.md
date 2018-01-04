@@ -1,5 +1,9 @@
 # RxJS 5 Dash Docs
 
+**NOTE:** There is an initiative happening to update the Rxjs docs. This Dash docset will not be updated until the new docs reach a stable point. See the repo for details: https://github.com/ReactiveX/rxjs-docs
+
+---
+
 RxJS 5 documentation for Dash
 
 ---
